@@ -1,5 +1,6 @@
 import AboutSectionTwo from "@/components/AboutSectionTwo";
 import BannerSection from "@/components/BannerSection";
+import FunFactsSection from "@/components/FunFactsSection";
 import Header from "@/components/Header";
 import MotoSection from "@/components/MotoSection";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <BannerSection />
       <MotoSection />
       <AboutSectionTwo />
+      <FunFactsSection />
     </>
   );
 }
