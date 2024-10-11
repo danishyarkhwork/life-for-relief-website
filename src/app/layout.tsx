@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Script from "next/script"; // Import Script from next/script
 
+// Importing local fonts
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -25,10 +27,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Link external CSS files */}
+        <link rel="stylesheet" href="/css/bootstrap.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/responsive.css" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+
+        {/* Add JS Scripts */}
+        <Script src="/js/jquery.js" strategy="beforeInteractive" />
+        <Script src="/js/popper.min.js" strategy="beforeInteractive" />
+        <Script src="/js/bootstrap.min.js" strategy="beforeInteractive" />
+        <Script src="/js/jquery-ui.js" strategy="lazyOnload" />
+        <Script src="/js/jquery.fancybox.js" strategy="lazyOnload" />
+        <Script src="/js/owl.js" strategy="lazyOnload" />
+        <Script src="/js/appear.js" strategy="lazyOnload" />
+        <Script src="/js/wow.js" strategy="lazyOnload" />
+        <Script src="/js/scrollbar.js" strategy="lazyOnload" />
+        <Script src="/js/isotope.js" strategy="lazyOnload" />
+        <Script src="/js/paroller.js" strategy="lazyOnload" />
+        <Script src="/js/custom-script.js" strategy="lazyOnload" />
       </body>
     </html>
   );
