@@ -51,11 +51,14 @@ const BannerSection = () => {
               <div className="content">
                 <div className="inner">
                   <div className="sub-title">
-                    Support the causes that matter
+                    Welcome to Life for Relief Organization
                   </div>
                   <h2>Empowering the lives of needy people</h2>
                   <div className="links-box">
-                    <Link href="/donate" className="theme-btn btn-style-two">
+                    <Link
+                      href="/get-involed"
+                      className="theme-btn btn-style-two"
+                    >
                       <span className="btn-title">Get involved</span>
                     </Link>
                     <span className="theme-icon"></span>
