@@ -217,9 +217,9 @@ const Footer = () => {
           <div className="auto-container">
             <div className="inner">
               <div className="copyright">
-                Copyrights (c) 2019{" "}
-                <Link href="#">Kausid Charity & Non-Profit Theme.</Link> All
-                rights reserved.
+                Copyrights (c) 2024{" "}
+                <Link href="#">Life for Relief & Development.</Link> All rights
+                reserved.
               </div>
             </div>
           </div>
