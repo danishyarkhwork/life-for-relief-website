@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
-import "./globals.css";
+import "./global.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
@@ -44,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased" suppressHydrationWarning>
         <Navbar />
         <main>{children}</main>
         <Footer />
