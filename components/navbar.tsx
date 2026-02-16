@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Heart, ChevronDown, Phone, Mail, ArrowRight } from "lucide-react";
+import { Menu, X, Heart, ChevronDown, Phone, Mail, ArrowRight, Instagram, Youtube } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -80,50 +80,51 @@ export function Navbar() {
     <>
       {/* Top Bar */}
       <div
-        className={`hidden lg:block bg-foreground text-background transition-all duration-500 ${
+        className={`bg-foreground text-background transition-all duration-500 ${
           isScrolled ? "h-0 opacity-0 overflow-hidden" : "h-auto opacity-100"
         }`}
       >
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="flex items-center justify-between py-2.5">
-            <div className="flex items-center gap-6">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 py-2 sm:py-2.5">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
               <a
                 href="tel:+17804307308"
-                className="flex items-center gap-2 text-xs text-background/70 hover:text-secondary transition-colors"
+                className="flex items-center gap-1.5 text-xs text-background/70 hover:text-secondary transition-colors whitespace-nowrap"
               >
-                <Phone className="w-3 h-3" />
-                +1-780-430-7308
+                <Phone className="w-3 h-3 shrink-0" />
+                <span className="hidden sm:inline">+1-780-430-7308</span>
+                <span className="sm:hidden">780-430-7308</span>
               </a>
               <a
                 href="mailto:info@liferelief.ca"
-                className="flex items-center gap-2 text-xs text-background/70 hover:text-secondary transition-colors"
+                className="flex items-center gap-1.5 text-xs text-background/70 hover:text-secondary transition-colors whitespace-nowrap"
               >
-                <Mail className="w-3 h-3" />
+                <Mail className="w-3 h-3 shrink-0" />
                 info@liferelief.ca
               </a>
             </div>
-            <div className="flex items-center gap-4">
-              <span className="text-xs text-background/50">
+            <div className="flex items-center gap-x-3 sm:gap-x-4">
+              <span className="text-xs text-background/50 hidden lg:inline whitespace-nowrap">
                 Registered Charity # 14091 3773 RR 0001
               </span>
-              <span className="text-background/20">|</span>
+              <span className="text-background/20 hidden lg:inline">|</span>
               <a
                 href="https://www.instagram.com/liferelief.ca/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-background/50 hover:text-secondary transition-colors"
+                className="w-5 h-5 flex items-center justify-center text-background/70 hover:text-secondary transition-colors"
                 aria-label="Instagram"
               >
-                Instagram
+                <Instagram className="w-4 h-4" />
               </a>
               <a
                 href="https://www.youtube.com/@LifeReliefCanada"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs text-background/50 hover:text-secondary transition-colors"
+                className="w-5 h-5 flex items-center justify-center text-background/70 hover:text-secondary transition-colors"
                 aria-label="YouTube"
               >
-                YouTube
+                <Youtube className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -141,14 +142,14 @@ export function Navbar() {
             : "bg-background border-b border-border/50"
         }`}
       >
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <nav className="flex items-center justify-between h-[4.5rem] lg:h-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <nav className="flex items-center justify-between h-16 sm:h-[4.5rem] lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 shrink-0">
+            <Link href="/" className="flex items-center gap-2 sm:gap-3 shrink-0">
               <img
                 src="/logo.png"
                 alt="Life for Relief & Development Canada"
-                className="h-11 lg:h-12 w-auto"
+                className="h-9 sm:h-11 lg:h-12 w-auto"
               />
             </Link>
 
@@ -235,18 +236,18 @@ export function Navbar() {
             </div>
 
             {/* CTA + Mobile Toggle */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <Link
                 href="/get-involved#donate"
-                className="hidden sm:flex items-center gap-2 px-6 py-2.5 bg-primary text-primary-foreground rounded-full text-sm font-semibold hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 active:translate-y-0"
+                className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-2.5 bg-primary text-primary-foreground rounded-full text-xs sm:text-sm font-semibold hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
               >
-                <Heart className="w-4 h-4" />
-                <span>Donate Now</span>
+                <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+                <span className="inline">Donate Now</span>
               </Link>
 
               <button
                 onClick={() => setIsMobileOpen(!isMobileOpen)}
-                className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-xl hover:bg-accent transition-colors"
+                className="lg:hidden relative w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl hover:bg-accent transition-colors"
                 aria-label={isMobileOpen ? "Close menu" : "Open menu"}
               >
                 <AnimatePresence mode="wait">
@@ -286,7 +287,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 lg:hidden"
+            className="fixed inset-0 z-[60] lg:hidden"
           >
             {/* Backdrop */}
             <motion.div
@@ -306,7 +307,7 @@ export function Navbar() {
               className="absolute right-0 top-0 bottom-0 w-full max-w-sm bg-background border-l border-border shadow-2xl flex flex-col"
             >
               {/* Mobile Header */}
-              <div className="flex items-center justify-between px-6 h-[4.5rem] border-b border-border shrink-0">
+              <div className="flex items-center justify-between px-4 sm:px-6 h-16 sm:h-[4.5rem] border-b border-border shrink-0">
                 <Link
                   href="/"
                   onClick={() => setIsMobileOpen(false)}
@@ -315,12 +316,12 @@ export function Navbar() {
                   <img
                     src="/logo.png"
                     alt="Life for Relief"
-                    className="h-10 w-auto"
+                    className="h-9 sm:h-10 w-auto"
                   />
                 </Link>
                 <button
                   onClick={() => setIsMobileOpen(false)}
-                  className="w-10 h-10 flex items-center justify-center rounded-xl hover:bg-accent transition-colors"
+                  className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl hover:bg-accent transition-colors"
                   aria-label="Close menu"
                 >
                   <X className="w-5 h-5" />
@@ -410,9 +411,9 @@ export function Navbar() {
                 <Link
                   href="/get-involved#donate"
                   onClick={() => setIsMobileOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-primary text-primary-foreground rounded-xl text-base font-semibold hover:bg-primary/90 transition-all"
+                  className="flex items-center justify-center gap-2 w-full px-5 py-3 sm:px-6 sm:py-3.5 bg-primary text-primary-foreground rounded-xl text-sm sm:text-base font-semibold hover:bg-primary/90 transition-all"
                 >
-                  <Heart className="w-5 h-5" />
+                  <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
                   Donate Now
                 </Link>
                 <div className="flex items-center justify-center gap-4 mt-3">
