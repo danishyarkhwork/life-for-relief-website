@@ -200,7 +200,7 @@ export function Navbar() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 8, scale: 0.98 }}
                         transition={{ duration: 0.15, ease: "easeOut" }}
-                        className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-background rounded-2xl border border-border shadow-2xl shadow-foreground/10 p-3 overflow-hidden"
+                        className="absolute top-full left-0 mt-2 w-72 bg-background rounded-2xl border border-border shadow-2xl shadow-foreground/10 p-3 overflow-hidden"
                       >
                         <div className="flex flex-col gap-0.5">
                           {link.children.map((child) => (

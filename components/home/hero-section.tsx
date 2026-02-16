@@ -31,7 +31,8 @@ export function HeroSection() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8 py-32 lg:py-40">
-        <div className="max-w-3xl">
+        <div className="max-w-2xl lg:max-w-xl">
+          <div className="bg-background/95 backdrop-blur-sm rounded-2xl border border-background/20 p-8 lg:p-10 shadow-2xl">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -53,7 +54,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold leading-[1.1] text-background text-balance mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-5xl font-serif font-bold leading-[1.1] text-foreground text-balance mb-6"
           >
             Working for{" "}
             <span className="relative">
@@ -73,7 +74,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-lg lg:text-xl text-background/70 leading-relaxed max-w-xl mb-10"
+            className="text-lg lg:text-xl text-muted-foreground leading-relaxed mb-10"
           >
             Life for Relief & Development Canada provides vital humanitarian
             assistance and sustainable development to the world&apos;s most
@@ -98,7 +99,7 @@ export function HeroSection() {
 
             <Link
               href="/about"
-              className="group flex items-center gap-3 px-8 py-4 bg-background/10 text-background border border-background/20 backdrop-blur-sm rounded-full font-semibold transition-all duration-300 hover:bg-background/20"
+              className="group flex items-center gap-3 px-8 py-4 bg-card text-foreground border border-border rounded-full font-semibold transition-all duration-300 hover:bg-accent"
             >
               <Play className="w-4 h-4" />
               Our Story
