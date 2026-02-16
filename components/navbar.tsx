@@ -146,7 +146,7 @@ export function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 shrink-0">
               <img
-                src="https://liferelief.ca/wp-content/uploads/2024/07/life-for-relief-logo-01.svg"
+                src="/logo.png"
                 alt="Life for Relief & Development Canada"
                 className="h-11 lg:h-12 w-auto"
               />
@@ -313,7 +313,7 @@ export function Navbar() {
                   className="block"
                 >
                   <img
-                    src="https://liferelief.ca/wp-content/uploads/2024/07/life-for-relief-logo-01.svg"
+                    src="/logo.png"
                     alt="Life for Relief"
                     className="h-10 w-auto"
                   />

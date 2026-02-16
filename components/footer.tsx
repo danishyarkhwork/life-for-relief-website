@@ -72,9 +72,9 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
               <img
-                src="https://liferelief.ca/wp-content/uploads/2024/07/life-for-relief-logo-01.svg"
+                src="/logo.png"
                 alt="Life for Relief & Development Canada"
-                className="h-14 w-auto brightness-0 invert"
+                className="h-14 w-auto"
               />
             </Link>
             <p className="text-background/60 text-sm leading-relaxed mb-6">
