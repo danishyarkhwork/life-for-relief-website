@@ -9,18 +9,21 @@ const testimonials = [
       "Life for Relief has been a lifeline for our community. Their dedication to providing clean water has transformed the lives of thousands of families.",
     author: "Community Leader",
     location: "Iraq",
+    image: "/about-2.png",
   },
   {
     quote:
       "The orphan sponsorship program gave my children a second chance at life. They now have access to education and a brighter future.",
     author: "Beneficiary",
     location: "Syria",
+    image: "/about-21.png",
   },
   {
     quote:
       "During the winter months, their relief efforts kept our families warm. We are forever grateful for their compassion and support.",
     author: "Refugee Camp Coordinator",
     location: "Lebanon",
+    image: "/about-22.png",
   },
 ];
 
@@ -62,19 +65,33 @@ export function TestimonialsSection() {
               transition={{ delay: index * 0.1 }}
               className="group"
             >
-              <div className="relative bg-background border border-border rounded-2xl p-8 h-full hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 transition-all duration-500">
-                <Quote className="w-10 h-10 text-primary/20 mb-6" />
-
-                <blockquote className="text-foreground leading-relaxed mb-8">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </blockquote>
-
-                <div className="pt-6 border-t border-border">
-                  <div className="font-semibold text-foreground text-sm">
-                    {testimonial.author}
+              <div className="relative bg-background border border-border rounded-2xl overflow-hidden h-full hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 transition-all duration-500 group">
+                {/* Image */}
+                {testimonial.image && (
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.location}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                   </div>
-                  <div className="text-xs text-muted-foreground mt-0.5">
-                    {testimonial.location}
+                )}
+
+                <div className="p-8">
+                  <Quote className="w-10 h-10 text-primary/20 mb-6" />
+
+                  <blockquote className="text-foreground leading-relaxed mb-8">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </blockquote>
+
+                  <div className="pt-6 border-t border-border">
+                    <div className="font-semibold text-foreground text-sm">
+                      {testimonial.author}
+                    </div>
+                    <div className="text-xs text-muted-foreground mt-0.5">
+                      {testimonial.location}
+                    </div>
                   </div>
                 </div>
               </div>
