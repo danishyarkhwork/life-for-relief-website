@@ -6,7 +6,7 @@ import { ArrowRight, Heart, Play } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative h-screen flex items-start sm:items-center overflow-hidden">
+    <section className="relative h-auto min-h-screen sm:h-screen flex items-start sm:items-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -30,7 +30,7 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 pt-16 pb-12 sm:pt-32 sm:pb-32 lg:pt-40 lg:pb-40">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 pt-8 pb-8 sm:pt-32 sm:pb-32 lg:pt-40 lg:pb-40">
         <div className="max-w-4xl xl:max-w-5xl">
           {/* Badge */}
           <motion.div
@@ -53,7 +53,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif font-bold leading-[1.1] text-background text-balance mb-4 sm:mb-6 lg:mb-8"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl font-serif font-bold leading-[1.1] text-background text-balance mb-4 sm:mb-6"
           >
             Working for{" "}
             <span className="relative">
@@ -73,7 +73,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-base sm:text-lg lg:text-xl xl:text-2xl text-background/70 leading-relaxed max-w-2xl mb-6 sm:mb-10 lg:mb-12"
+            className="text-base sm:text-lg lg:text-lg xl:text-lg text-background/70 leading-relaxed max-w-2xl mb-6 sm:mb-10"
           >
             Life for Relief & Development Canada provides vital humanitarian
             assistance and sustainable development to the world&apos;s most
@@ -89,18 +89,18 @@ export function HeroSection() {
           >
             <Link
               href="/get-involved#donate"
-              className="group flex items-center gap-2 sm:gap-3 px-5 sm:px-8 lg:px-10 py-2.5 sm:py-4 lg:py-5 bg-secondary text-secondary-foreground rounded-full text-sm sm:text-base lg:text-lg font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-secondary/30 hover:-translate-y-0.5"
+              className="group flex items-center gap-2 sm:gap-3 px-5 sm:px-8 lg:px-8 py-2.5 sm:py-3.5 lg:py-3.5 bg-secondary text-secondary-foreground rounded-full text-sm sm:text-base lg:text-base font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-secondary/30 hover:-translate-y-0.5"
             >
-              <Heart className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Heart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-4 lg:h-4" />
               Donate Now
-              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-3.5 lg:h-3.5 transition-transform group-hover:translate-x-1" />
             </Link>
 
             <Link
               href="/about"
-              className="group flex items-center gap-2 sm:gap-3 px-5 sm:px-8 lg:px-10 py-2.5 sm:py-4 lg:py-5 bg-background/10 text-background border border-background/20 backdrop-blur-sm rounded-full text-sm sm:text-base lg:text-lg font-semibold transition-all duration-300 hover:bg-background/20"
+              className="group flex items-center gap-2 sm:gap-3 px-5 sm:px-8 lg:px-8 py-2.5 sm:py-3.5 lg:py-3.5 bg-background/10 text-background border border-background/20 backdrop-blur-sm rounded-full text-sm sm:text-base lg:text-base font-semibold transition-all duration-300 hover:bg-background/20"
             >
-              <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <Play className="w-3.5 h-3.5 sm:w-4 sm:h-4 lg:w-3.5 lg:h-3.5" />
               Our Story
             </Link>
           </motion.div>
@@ -110,7 +110,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="flex flex-wrap gap-6 sm:gap-8 lg:gap-12 xl:gap-16 mt-12 sm:mt-16 lg:mt-20 pt-6 sm:pt-8 lg:pt-10 border-t border-background/10"
+            className="flex flex-wrap gap-6 sm:gap-8 lg:gap-10 mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-background/10"
           >
             {[
               { value: "30+", label: "Years of Service" },
@@ -118,7 +118,7 @@ export function HeroSection() {
               { value: "1M+", label: "Lives Impacted" },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-serif font-bold text-primary">
+                <div className="text-2xl sm:text-3xl lg:text-3xl xl:text-3xl font-serif font-bold text-primary">
                   {stat.value}
                 </div>
                 <div className="text-xs sm:text-sm text-background/50 mt-1">
